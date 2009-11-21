@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Items &amp; Workbooks: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'itunes', 'facebox', 'workbooks-specific' %>
+  <%= javascript_include_tag 'jquery', 'jquery-scrollTo-min', 'facebox' %>
+</head>
+<body>
+
+<div id="header">
+  <div class="top-search-box">
+    <input name="s" id="s" type="search" placeholder="Search for Item" autosave="com.apple.retailsupply" results="5"<%= @enable_search ? '' : " disabled='true'" %> />
+  </div>
+  
+  <%# if logged_in? %>
+  <div class="button-box logout">
+    <a class="button" href="/splash"><span class="icon">Back</span></a>
+  </div>
+  <%# end %>
+  
+  <div class="title">
+    Items &amp; Workbooks
+  </div>
+</div>
+
+<div id="content">
+  
+  <%# if navigation %>
+    <div id="navigation">
+      <div class="nav-section">
+        <h2>Item Database</h2>
+        <a href="/alphabetical_items" id="alphabetical_items-nav" class="nav-el<%= @section == 'alphabetical_items' ? ' selected' : '' %>"><span class="icon">Alphabetical List</span></a>
+        <a href="/store_location_items" id="store_location_items-nav" class="nav-el<%= @section == 'store_location_items' ? ' selected' : '' %>"><span class="icon">Store Location</span></a>
+        <a href="/vendor_supply_type_items" id="vendor_supply_type_items-nav" class="nav-el<%= @section == 'vendor_supply_type_items' ? ' selected' : '' %>"><span class="icon">Vendor Type</span></a>
+        <a href="/locale_items" id="locale_items-nav" class="nav-el<%= @section == 'locale_items' ? ' selected' : '' %>"><span class="icon">Locale</span></a>
+      </div>
+      
+      <div class="nav-section">
+        <h2>New Store Openings</h2>
+        
+        <a href="/new_store_openings/new" id="new_store_openings-nav" class="nav-el<%= @section == 'new_store_openings' ? ' selected' : '' %>"><span class="icon">NSO Workbk.</span></a>
+      </div>
+      
+      <div class="nav-section">
+        <h2>Store Remodels</h2>
+        
+        <a href="/new_store_openings/new" id="new_store_openings-nav" class="nav-el<%= @section == 'new_store_openings' ? ' selected' : '' %>"><span class="icon">Remodel Workbk.</span></a>
+      </div>
+
+    </div>
+  <%# end %>
+  
+  <div id="main" class="<%# navigation ? "with-navigation" : ""%> with-navigation<%= @week_navigation ? ' with-2nd-navigation' : '' %>">
+    <%= render :partial => "shared/#{@section}_subnav" unless @section.blank? %>
+    
+    <% if @item_subnavigation %>
+      <div id="subnavigation-left">
+        <%= render :partial => 'shared/item_subnavigation' %>
+      </div>
+    <% end %>
+    
+    <div id="body" class="<%= @item_subnavigation ? 'with-left-subnav': '' %>">
+      <%= yield %>
+    </div>
+  </div>
+
+</div>
+
+<div id="footer-spacing"></div>
+
+<div id="footer">
+  <div class="button-box plus">
+    <a class="button" href="/items/new" title="Add a New Item"><%= image_tag 'footer-plus-button.png' %></a>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function hideDiv(id) {$('#'+id).addClass('hidden');}
+  function showDiv(id) {$('#'+id).removeClass('hidden');}
+  function showDropdown(id, base) { // for developer email 
+    submenu = $('#' + id);
+    var menuel = $('#' + base);
+    submenu.remove();
+    $('#main').append(submenu);
+    var submenu = $('#' + id);
+    submenu[0].style.top = (menuel.offset().top - 55) + "px";
+    submenu[0].style.left = (menuel.offset().left - <%= @week_navigation ? '361' : '180' %> + 12) + "px";
+    submenu.removeClass('hidden');
+    menuel.addClass('viewing-submenu');
+    $(document).click(function() { hideSubmenu(id, base); });
+  }
+  function showSubmenu(id, base) { 
+    submenu = $('#' + id);
+    var menuel = $('#' + base);
+    submenu.remove();
+    $('#main').append(submenu);
+    var submenu = $('#' + id);
+    submenu[0].style.top = "25px";
+    submenu[0].style.left = (menuel.offset().left - <%= @week_navigation ? '361' : '180' %> + 2) + "px";
+    submenu.removeClass('hidden');
+    menuel.addClass('viewing-submenu');
+    $(document).click(function() { hideSubmenu(id, base); });
+  }
+  function hideSubmenu(id, base) {
+    var submenu = $('#' + id);
+    var menuel = $('#' + base);
+    submenu.addClass('hidden');
+    menuel.removeClass('viewing-submenu');
+  }
+  function activateTab(tabsBox, activeTab) {
+    $('#' + tabsBox + ' a').removeClass('active');
+    $('#' + activeTab).addClass('active');
+  }
+</script>
+
+</body>
+</html>

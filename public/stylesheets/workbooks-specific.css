@@ -1,0 +1,5 @@
+table.all-items td.image {text-align:center;}
+table.all-items img {height:50px;}
+#body table.all-items td.location.boh {background-color:#cc99ff;}
+#body table.all-items td.location.genius-bar {background-color:#90713a;}
+#body table.all-items td.location.genius-repair-room {background-color:#339966;}
