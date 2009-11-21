@@ -3,3 +3,31 @@ table.all-items img {height:50px;}
 #body table.all-items td.location.boh {background-color:#cc99ff;}
 #body table.all-items td.location.genius-bar {background-color:#90713a;}
 #body table.all-items td.location.genius-repair-room {background-color:#339966;}
+
+.show-item .picture img { width:180px;}
+.show-item .picture {float:left; width:180px;}
+
+.show-item .name-desc-notes-box {margin-right:26%; margin-left:180px;padding:3px 5px;}
+.show-item .locations-and-vendor-type {float:right; width:23%;}
+
+.show-item .name-and-description {}
+.show-item .name-and-description .description h3 {display:none;}
+.show-item .name-and-description .description {margin-top:5px; border:1px solid #ccc;  -webkit-border-radius:3px; padding:4px; font-size:85%; line-height:1.4em;}
+
+
+.show-item .new-note-box {float:right; padding-top:10px;}
+#body .show-item .new-note-box a.main-content-button {padding:0px 4px 1px 4px;}
+.show-item .note .byline {color:#888; font-size:83%;}
+.show-item .note p {margin-bottom:5px;}
+.show-item .note {margin-bottom:25px; border-bottom:1px dashed #ccc; padding-bottom:5px;}
+.show-item .note-actions {float:right; width:25%; font-size:83%; text-align:right;}
+.show-item .note textarea {width:95%;}
+
+
+.locations-and-vendor-type {margin-left:20px; border-left:1px solid #ccc;border-bottom:1px solid #ccc; padding:0 10px 10px 10px; background:#fff url(/images/subnav-left-header-bg.png) repeat-x scroll bottom left;-webkit-border-bottom-left-radius:8px; }
+
+.locations-and-vendor-type .location span.icon {padding:1px 8px;-webkit-border-radius:8px;}
+.locations-and-vendor-type .location.boh span.icon {background-color:#cc99ff;}
+.locations-and-vendor-type .location.genius-bar span.icon {background-color:#90713a;}
+.locations-and-vendor-type .location.genius-repair-room span.icon {background-color:#339966;}
+.locations-and-vendor-type .location { line-height: 25px;}
