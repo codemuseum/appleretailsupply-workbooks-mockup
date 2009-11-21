@@ -31,3 +31,10 @@ table.all-items img {height:50px;}
 .locations-and-vendor-type .location.genius-bar span.icon {background-color:#90713a;}
 .locations-and-vendor-type .location.genius-repair-room span.icon {background-color:#339966;}
 .locations-and-vendor-type .location { line-height: 25px;}
+
+.show-item .countries-box {margin:20px; border:1px solid #ccc; -webkit-border-radius:8px; }
+.show-item .country { border-bottom:1px solid #ccc;}
+.show-item .country h4 {float:left; width:15%; text-align:center;}
+.show-item .country .info-column {float:left; width:40%;}
+.show-item .country .info-column .field-label {width:30%;}
+.show-item .country .info-column .field-value {margin-left:31%;}
