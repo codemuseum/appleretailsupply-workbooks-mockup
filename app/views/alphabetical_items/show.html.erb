@@ -26,11 +26,50 @@
   <div class="note">
     <p>We're waiting for the vendor to get back to us about the pricing.</p>
     <div class="byline">by Jeanette at 3/1/09, 12:45pm</div>
-    <div class="note-actions">Mark as Resolved</div>
+    <div class="note-actions"><%= link_to 'Mark as Resolved', '#', :class => 'main-content-button' %></div>
   </div>
-  <div class="note">
-    <p>We're waiting for the vendor to get back to us about the pricing.</p>
-    <div class="byline">by Jeanette at 3/1/09, 12:45pm</div>
-    <div class="note-actions">Un-Mark as Resolved</div>
+  
+  <div id="show_old_notes" class="expanding-link">
+    <a href="javascript:hideDiv('show_old_notes');showDiv('older_notes');">Show Older Notes (3)</a>
   </div>
+  
+  <div id="older_notes" class="hidden">
+    <div class="note">
+      <p>We're waiting for the vendor to get back to us about the pricing.</p>
+      <div class="byline">by Jeanette at 3/1/09, 12:45pm</div>
+      <div class="note-actions">Resolved. <%= link_to 'Un-Mark', '#', :class => 'main-content-button disabled' %></div>
+    </div>
+    <div class="note">
+      <p>We're waiting for the vendor to get back to us about the pricing.</p>
+      <div class="byline">by Jeanette at 3/1/09, 12:45pm</div>
+      <div class="note-actions">Resolved. <%= link_to 'Un-Mark', '#', :class => 'main-content-button disabled' %></div>
+    </div>
+    <div class="note">
+      <p>We're waiting for the vendor to get back to us about the pricing.</p>
+      <div class="byline">by Jeanette at 3/1/09, 12:45pm</div>
+      <div class="note-actions">Resolved. <%= link_to 'Un-Mark', '#', :class => 'main-content-button disabled' %></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="countries-box">
+  <% ['US', 'Canada', 'Japan', 'China', 'Germany', 'Italy', 'France', 'Switzerland'].each do |country| %>
+  <div class="country">
+    <h4><%=h country %></h4>
+    <div class="info-column">
+      <div class="field-row"><div class="field-label"><label for="">Vendor</label></div> <div class="field-value">&nbsp;<select><option>XPDX</option><option>Staples</option></select></div></div>
+      <div class="field-row"><div class="field-label"><label for="">Apple Part #</label></div> <div class="field-value">&nbsp;<%= text_field_tag '', '' %></div></div>
+      <div class="field-row"><div class="field-label"><label for="">Vendor Part #</label></div> <div class="field-value">&nbsp;<%= text_field_tag '', '' %></div></div>
+      <div class="field-row"><div class="field-label"><label for="">Mfgr. Part #</label></div> <div class="field-value">&nbsp;<%= text_field_tag '', '' %></div></div>
+    </div>
+    <div class="info-column">
+      <div class="field-row"><div class="field-label"><label for="">Unit of Measure</label></div> <div class="field-value">&nbsp;<%= text_field_tag '', '' %></div></div>
+      <h5>Quantities in Stores</h5>
+      <div class="field-row"><div class="field-label"><label for="">Mini Store</label></div> <div class="field-value">&nbsp;<%= text_field_tag '', '' %></div></div>
+      <div class="field-row"><div class="field-label"><label for="">Small Store</label></div> <div class="field-value">&nbsp;<%= text_field_tag '', '' %></div></div>
+      <div class="field-row"><div class="field-label"><label for="">Flagship Store</label></div> <div class="field-value">&nbsp;<%= text_field_tag '', '' %></div></div>
+    </div>
+  </div>
+  <% end %>
 </div>
