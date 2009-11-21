@@ -93,7 +93,17 @@
     <% ['US', 'Canada', 'Japan', 'China', 'Germany', 'Italy', 'France', 'Switzerland'].each do |country| %>
     <div class="country">
 
-      <div id="show-country-<%= country.downcase %>">
+
+      <% if country == 'China' || country == 'Germany' || country == 'Italy' || country == 'France' || country == 'Switzerland' %>
+        <div id="not-available-<%= country.downcase %>" class="not-available">
+          <div class="edit-country-box"><%= link_to 'Make Available', "javascript:showDiv('edit-country-#{country.downcase}');hideDiv('not-available-#{country.downcase}');", :class => 'main-content-button' %></div>
+          
+          <h4><%=h country %></h4>
+          <div class="notice">Item not available here.</div>
+          <div class="clear"></div>
+        </div>
+      <% end %>
+      <div id="show-country-<%= country.downcase %>" class="<%= country == 'China' || country == 'Germany' || country == 'Italy' || country == 'France' || country == 'Switzerland' ? 'hidden' : '' %>">
         <div class="edit-country-box"><%= link_to 'edit', "javascript:showDiv('edit-country-#{country.downcase}');hideDiv('show-country-#{country.downcase}');", :class => 'main-content-button' %></div>
       
         <h4><%=h country %></h4>
@@ -138,6 +148,7 @@
           <%= link_to 'Save', "javascript:hideDiv('edit-country-#{country.downcase}');showDiv('show-country-#{country.downcase}');", :class => 'green-button' %>
         </div>
       </div>
+
     </div>
     <% end %>
   </div>

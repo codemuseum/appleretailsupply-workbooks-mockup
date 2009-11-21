@@ -43,3 +43,5 @@ table.all-items img {height:50px;}
 .show-item .country .edit-country-box {display:none;}
 .show-item .country:hover .edit-country-box {display:block; float:right; margin-right:5px; margin-top:5px;}
 .show-item .country .save-or-cancel {position:absolute; bottom:5px; width:100%; text-align:center;}
+
+.show-item .country .not-available .notice {padding-top:30px; margin-left:200px; font-size:120%; color:#999;}
