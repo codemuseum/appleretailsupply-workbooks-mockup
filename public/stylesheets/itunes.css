@@ -189,6 +189,10 @@ a.red-button {padding:4px; border:1px solid #acbed0; -webkit-border-radius:5px; 
 #subnavigation-left .scroller a:hover { background: #8295bd url(../images/navigation-hovered-bg.png) top left repeat-x; color:#fff; text-shadow:#535f81 1px 1px 1px; font-weight:bold;}
 #subnavigation-left .scroller a.selected { background: #1867c7 url(../images/navigation-selected-bg.png) top left repeat-x; color:#fff; text-shadow:#021b3a 1px 1px 1px; font-weight:bold;}
 
+ 
+#subnavigation-left .nav-section h4 {color:#505d6d; text-align:left; text-shadow:#f3f5f8 1px 1px 1px;  font-size:80%; text-transform: uppercase; margin-left:10px; padding-bottom:0; margin-top:20px;}
+#subnavigation-left .nav-section a{ padding-left:25px;}
+
 /* --- week: status report --- */
 .upload-exchange {text-align:center;}
 .upload-exchange input.file { font-size:83%; }
