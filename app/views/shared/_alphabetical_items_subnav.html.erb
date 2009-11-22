@@ -11,9 +11,10 @@
       <%= link_to image_tag('subnav-chevron-down-arrow.png'), 'javascript:showSubmenu(\'view_method_submenu\', \'view_method_menu_item\')', :class => "submenu-arrow" %> 
       <%= link_to 'Alphabetical&nbsp;', '/alphabetical_items' %>
       <ol class="sub-menu hidden" id="view_method_submenu">
+        <li><%= link_to 'View by Alphabetical Item Name', "/alphabetical_items" %></li>
         <li><%= link_to 'View by Store Location', "/store_location_items" %></li>
         <li><%= link_to 'View by Vendor Supply Type', "/vendor_supply_type_items" %></li>
-        <li><%= link_to 'View by Locale', "/locale_items" %></li>
+        <li><%= link_to 'View by Country', "/country_items" %></li>
       </ol>
     </li>
     <li class="<%= @subsection == "alphabetical_All" ? 'active' : '' %><%= @subsection == "index" ? ' active-chevron-before' : ' inactive-chevron-before' %>"><%= link_to 'All', '/alphabetical_items' %></li>

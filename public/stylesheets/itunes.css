@@ -184,7 +184,7 @@ a.red-button {padding:4px; border:1px solid #acbed0; -webkit-border-radius:5px; 
 #subnavigation-left a.button:active {background-image: url(../images/header-button-bg-active.png); background-color:#727272; color:#fff; text-shadow:#4f4f50 1px 1px 1px;}
 #subnavigation-left .scroller {background-color:#f9f9f9; height:100%; overflow:auto;}
 
-#subnavigation-left .scroller a {display:block; font-size:83%; color:#000; text-decoration:none; padding:3px 10px; margin-top:0.5em; }
+#subnavigation-left .scroller a {position:relative; display:block; font-size:83%; color:#000; text-decoration:none; padding:3px 10px; margin-top:0.5em; }
 #subnavigation-left .scroller a span.icon {display:block; padding-left:23px; background:transparent url(../images/nav/global-icon.png) center left no-repeat; line-height:2em;  }
 #subnavigation-left .scroller a:hover { background: #8295bd url(../images/navigation-hovered-bg.png) top left repeat-x; color:#fff; text-shadow:#535f81 1px 1px 1px; font-weight:bold;}
 #subnavigation-left .scroller a.selected { background: #1867c7 url(../images/navigation-selected-bg.png) top left repeat-x; color:#fff; text-shadow:#021b3a 1px 1px 1px; font-weight:bold;}
