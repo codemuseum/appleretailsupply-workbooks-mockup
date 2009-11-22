@@ -59,3 +59,8 @@ table.all-items img {height:50px;}
 .name-and-description:hover .hover-edit-box,
 .picture:hover .hover-edit-box,
 .locations-and-vendor-type:hover .hover-edit-box {position:absolute; display:block; right:5px; top:5px;}
+
+.manage-store-locations .color {padding:1px 8px;-webkit-border-radius:8px;background-color:#eee;}
+
+
+

@@ -5,6 +5,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :vendor_supply_type_items
   map.resources :country_items
   map.resources :new_store_openings
+  map.resources :store_remodels
+  map.resources :manage_store_locations
+  map.resources :manage_vendor_types
+  map.resources :manage_store_sizes
+  map.resources :manage_countries
 
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
