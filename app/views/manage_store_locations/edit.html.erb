@@ -1,0 +1,33 @@
+
+<h2>Edit Early Manager Kit Location</h2>
+
+<div id="app_data" class="app-section">
+  <h3>Store Location Info</h3>
+  
+  <div class="field-rows">
+    <div class="field-row"><div class="field-label"><label for="">Name</label></div> <div class="field-value">&nbsp;<%= text_field_tag '', '' %></div></div>
+    <div class="field-row"><div class="field-label"><label for="">Color</label></div> <div class="field-value">&nbsp;<%= text_field_tag '', '', :id => 'colorpickerfield' %></div></div>
+  </div>
+</div>
+
+
+<div class="centered top_pad">
+  <%= submit_tag 'Save Location' %>
+</div>
+
+<%= stylesheet_link_tag 'colorpicker' %>
+<%= javascript_include_tag 'colorpicker', 'eye', 'utils', 'layout' %>
+<script type="text/javascript">
+$('#colorpickerfield').ColorPicker({
+	onSubmit: function(hsb, hex, rgb, el) {
+		$(el).val(hex);
+		$(el).ColorPickerHide();
+	},
+	onBeforeShow: function () {
+		$(this).ColorPickerSetColor(this.value);
+	}
+})
+.bind('keyup', function(){
+	$(this).ColorPickerSetColor(this.value);
+});
+</script>

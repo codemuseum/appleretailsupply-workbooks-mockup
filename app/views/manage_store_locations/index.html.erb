@@ -1,0 +1,30 @@
+<script type="text/javascript">
+  var removeLocation = "<div class='facebox-text'>Are you sure you'd like to remove this store location? Any items that were assigned to this location will no longer be assigned to this location.</div>"+
+    "<div class='centered top_pad'><a href='' class='red-button'>Remove Location</a></div>";
+</script>
+
+<div class="top-right-create-box">
+  <%=link_to "+ Add Store Location", '/manage_store_locations/1/edit', :class => 'main-content-button' %>
+</div>
+
+<h2>Store Locations</h2>
+
+<table class="manage-store-locations" cellspacing="0" cellpadding="0">
+  <tr class="header">
+    <th class="sorted-desc"><div class="sort-icon"></div><a href="#SORT">Name</a></th>
+    <th><a href="#SORT">Color</a></th>
+    <th>Remove</th>
+  </tr>
+
+
+  <% ['Early Manager Kit', 'Visual', 'Manager\'s Office', 'Retail Systems', 'Genius Repair Room', 'Business', 'Janitorial', 'Personal Setup', 'Genius Bar', 'Cash Wrap', 'Back of House (BOH)', 'Operator'].each do |area| %>
+  <tr>
+    <td><a href="/manage_store_locations/1/edit"><%= area %></a></td>
+    <td><a href="/manage_store_locations/1/edit"><span class="color">&nbsp;</span></a></td>
+    <td class="remove"><a href="javascript:jQuery.facebox(removeLocation)"><%= image_tag 'gray-remove-circle.png' %></a></td>
+  </tr>
+  <% end %>
+
+
+</table>
+

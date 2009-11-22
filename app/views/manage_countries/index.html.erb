@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  var removeLocation = "<div class='facebox-text'>Are you sure you'd like to remove this country? Any data that was assigned to this country will be lost.</div>"+
+    "<div class='centered top_pad'><a href='' class='red-button'>Remove Size</a></div>";
+</script>
+
+<div class="top-right-create-box">
+  <%=link_to "+ Add Country", '/manage_countries/1/edit', :class => 'main-content-button' %>
+</div>
+
+<h2>Countries</h2>
+
+<table class="manage-store-locations" cellspacing="0" cellpadding="0">
+  <tr class="header">
+    <th class="sorted-desc"><div class="sort-icon"></div><a href="#SORT">Name</a></th>
+    <th>Remove</th>
+  </tr>
+
+
+  <% ['Australia', 'Canada', 'China', 'France', 'Germany', 'Italy', 'Japan', 'Switzerland', 'UK', 'USA'].each do |area| %>
+  <tr>
+    <td><a href="/manage_countries/1/edit"><%= area %></a></td>
+    <td class="remove"><a href="javascript:jQuery.facebox(removeLocation)"><%= image_tag 'gray-remove-circle.png' %></a></td>
+  </tr>
+  <% end %>
+
+
+</table>
+

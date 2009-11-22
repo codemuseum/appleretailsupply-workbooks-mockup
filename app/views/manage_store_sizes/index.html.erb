@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  var removeLocation = "<div class='facebox-text'>Are you sure you'd like to remove this store size? Any quantities that were assigned to this store sie will no longer be assigned to this size.</div>"+
+    "<div class='centered top_pad'><a href='' class='red-button'>Remove Size</a></div>";
+</script>
+
+<div class="top-right-create-box">
+  <%=link_to "+ Add Store Size", '/manage_store_sizes/1/edit', :class => 'main-content-button' %>
+</div>
+
+<h2>Store Sizes</h2>
+
+<table class="manage-store-locations" cellspacing="0" cellpadding="0">
+  <tr class="header">
+    <th class="sorted-desc"><div class="sort-icon"></div><a href="#SORT">Name</a></th>
+    <th>Remove</th>
+  </tr>
+
+
+  <% ['Mini', 'Small', 'Flagship'].each do |area| %>
+  <tr>
+    <td><a href="/manage_store_sizes/1/edit"><%= area %></a></td>
+    <td class="remove"><a href="javascript:jQuery.facebox(removeLocation)"><%= image_tag 'gray-remove-circle.png' %></a></td>
+  </tr>
+  <% end %>
+
+
+</table>
+

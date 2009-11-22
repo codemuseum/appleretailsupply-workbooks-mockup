@@ -1,0 +1,28 @@
+
+<div id="subnav">
+  <ul>
+    <!-- <li><%= link_to image_tag('subnav-back-button.png'), '' %></li> -->
+    <li class="chevron with-submenu <%= @subsection == "countries" ? 'active' : '' %>" id="countries_menu_item">
+      <%= link_to image_tag('subnav-chevron-down-arrow.png'), 'javascript:showSubmenu(\'countries_submenu\', \'countries_menu_item\')', :class => "submenu-arrow" %> 
+      <%= link_to 'USA&nbsp;', '/new_store_openings/new' %>
+      <ol class="sub-menu hidden" id="countries_submenu">
+        <%['USA', 'Australia', 'Canada', 'China', 'France', 'Germany', 'Italy', 'Japan', 'Switzerland', 'UK'].each do |country| %>
+          <li><%= link_to country, "/new_store_openings/new" %></li>
+        <% end %>
+      </ol>
+    </li>
+    <li class="chevron with-submenu <%= @subsection == "store_sizes" ? 'active' : '' %>" id="store_sizes_menu_item">
+      <div class="chevron-divider <%= @subsection == "countries" ? ' active-chevron-before' : ' inactive-chevron-before' %>">
+        <%= link_to image_tag('subnav-chevron-down-arrow.png'), 'javascript:showSubmenu(\'store_sizes_submenu\', \'store_sizes_menu_item\')', :class => "submenu-arrow" %>       
+        <%= link_to 'Mini&nbsp;', '/new_store_openings/new' %>
+        <ol class="sub-menu hidden" id="store_sizes_submenu">
+          <li><%= link_to 'Mini', "/new_store_openings/new" %></li>
+          <li><%= link_to 'Small', "/new_store_openings/new" %></li>
+          <li><%= link_to 'Flagship', "/new_store_openings/new" %></li>
+        </ol>
+      </div>
+    </li>
+    <li class="<%= @subsection == "show" ? 'active' : '' %><%= @subsection == "store_sizes" ? ' active-chevron-before' : ' inactive-chevron-before' %>"><%= link_to 'View', '/new_store_openings/1' %></li>
+    <li class="<%= @subsection == "download" ? 'active' : '' %>"><%= link_to 'Download XLS', '/new_store_openings/1.xls' %></li>
+  </ul>
+</div>

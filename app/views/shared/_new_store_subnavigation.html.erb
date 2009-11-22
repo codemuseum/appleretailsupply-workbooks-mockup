@@ -1,0 +1,44 @@
+<div class="header">
+  <h3>
+    <% if @controller.controller_name == 'new_store_openings'  %>
+      USA <br/> Mini Store
+    <% else %>
+      USA <br/> Mini Store
+    <% end %>
+  </h3>
+  <div class="count">2,091 Items</div>
+  <%=link_to "Export to Excel", '/report.xls', :class => 'button' %>
+</div>
+<div class="scroller">
+  
+  <a href="/new_store_openings/1" class="<%= @controller.action_name == 'show' ? ' selected' : '' %>"><span class="area-icon boh">All Items</span></a>
+  
+  <div class="nav-section">
+    <h4>By Store Location</h4>
+
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Early Manager Kit</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Visual</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Manager's Office</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Retail Systems</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Genius Repair Room</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Business</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Janitorial</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Personal Setup</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Genius Bar</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Cash Wrap</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Back of House (BOH)</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Operator</span></a>
+    
+  </div>
+  
+  <div class="nav-section">
+    <h4>By Vendor</h4>
+
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">XPDX</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Staples</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">MCM</span></a>
+    <a href="/new_store_openings/1"><span class="open-notes-count">15</span><span class="area-icon boh">Apple</span></a>
+    
+  </div>
+  
+</div>

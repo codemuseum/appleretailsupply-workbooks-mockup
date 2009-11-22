@@ -1,0 +1,2 @@
+module StoreRemodelsHelper
+end

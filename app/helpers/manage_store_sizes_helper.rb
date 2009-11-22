@@ -1,0 +1,2 @@
+module ManageStoreSizesHelper
+end

@@ -1,0 +1,8 @@
+<div id="subnav">
+  <ul>
+    <li class="<%= @subsection == "manage_store_locations" ? 'active' : '' %>"><%= link_to 'Store Locations', '/manage_store_locations' %></li>
+    <li class="<%= @subsection == "manage_vendor_types" ? 'active' : '' %>"><%= link_to 'Vendor Types', '/manage_vendor_types' %></li>
+    <li class="<%= @subsection == "manage_store_sizes" ? 'active' : '' %>"><%= link_to 'Store Sizes', '/manage_store_sizes' %></li>
+    <li class="<%= @subsection == "manage_countries" ? 'active' : '' %>"><%= link_to 'Countries', '/manage_countries' %></li>
+  </ul>
+</div>
