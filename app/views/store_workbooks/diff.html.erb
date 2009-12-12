@@ -1,0 +1,68 @@
+<script type="text/javascript">
+  var add = "<div class='facebox-text'>Are you sure you'd like to add this new item to the workbook?</div>"+
+    "<div class='centered top_pad'><a href='' class='green-button'>Add Item</a></div>";
+    var remove = "<div class='facebox-text'>Are you sure you'd like to add remove this old item from the workbook?</div>"+
+      "<div class='centered top_pad'><a href='' class='red-button'>Remove Item</a></div>";
+</script>
+
+<h2>Differences from Current Workbook</h2>
+
+<h3>New Items Missing (3)</h3>
+
+<table class="all-items" cellspacing="0" cellpadding="0">
+  <tr class="header">
+    <th><a href="#SORT">Location</a></th>
+    <th><a href="#SORT">Vendor</a></th>
+    <th><a href="#SORT">Apple / Vendor Part #</a></th>
+    <th><a href="#SORT">Mfgr. Part #</a></th>
+    <th class="sorted-desc"><div class="sort-icon"></div><a href="#SORT">Name</a></th>
+    <th><a href="#SORT">Image</a></th>
+    <th><a href="#SORT">Unit of Measure</a></th>
+    <th><a href="#SORT">Quantity in Kit</a></th>
+    <th><a href="#SORT">Add</a></th>
+  </tr>
+
+  <tr>
+    <td class="location boh"><a href="/alphabetical_items/1">Back of House</a></td>
+    <td><a href="/alphabetical_items/1">XPDX</a></td>
+    <td><a href="/alphabetical_items/1">ACM51005</a></td>
+    <td><a href="/alphabetical_items/1">700806</a></td>
+    <td><a href="/alphabetical_items/1">Data Rack Label<br/><small>This is the description of the item.</small></a></td>
+    <td class="image"><a href="/alphabetical_items/1"><%= link_to image_tag('temp/rack-label.jpg'), 'javascript:jQuery.facebox({image: \'/images/temp/rack-label.jpg\'})' %></a></td>
+    <td><a href="/alphabetical_items/1">BX</a></td>
+    <td><a href="/alphabetical_items/1">2</a></td>
+    <td><a href="javascript:$.facebox(add)" class="main-content-button">Add to Workbook</a></td>
+  </tr>
+
+
+</table>
+
+<h3>Items Removed from The Item Database or Locale (3)</h3>
+
+<table class="all-items" cellspacing="0" cellpadding="0">
+  <tr class="header">
+    <th><a href="#SORT">Location</a></th>
+    <th><a href="#SORT">Vendor</a></th>
+    <th><a href="#SORT">Apple / Vendor Part #</a></th>
+    <th><a href="#SORT">Mfgr. Part #</a></th>
+    <th class="sorted-desc"><div class="sort-icon"></div><a href="#SORT">Name</a></th>
+    <th><a href="#SORT">Image</a></th>
+    <th><a href="#SORT">Unit of Measure</a></th>
+    <th><a href="#SORT">Quantity in Kit</a></th>
+    <th><a href="#SORT">Remove</a></th>
+  </tr>
+
+  <tr>
+    <td class="location boh"><a href="/alphabetical_items/1">Back of House</a></td>
+    <td><a href="/alphabetical_items/1">XPDX</a></td>
+    <td><a href="/alphabetical_items/1">ACM51005</a></td>
+    <td><a href="/alphabetical_items/1">700806</a></td>
+    <td><a href="/alphabetical_items/1">Data Rack Label<br/><small>This is the description of the item.</small></a></td>
+    <td class="image"><a href="/alphabetical_items/1"><%= link_to image_tag('temp/rack-label.jpg'), 'javascript:jQuery.facebox({image: \'/images/temp/rack-label.jpg\'})' %></a></td>
+    <td><a href="/alphabetical_items/1">BX</a></td>
+    <td><a href="/alphabetical_items/1">2</a></td>
+    <td><a href="javascript:$.facebox(remove)" class="main-content-button">Remove from Workbook</a></td>
+  </tr>
+
+
+</table>

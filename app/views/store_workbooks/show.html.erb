@@ -1,0 +1,40 @@
+<script type="text/javascript">
+  var removeWorkbook = "<div class='facebox-text'>Are you sure you'd like to remove this workbook? Any data that was assigned to this country will be lost.</div>"+
+    "<div class='centered top_pad'><a href='' class='red-button'>Remove Workbook</a></div>";
+</script>
+
+<div class="top-right-create-box">
+  <%=link_to "+ Add Workbook", '/store_workbooks/new', :class => 'main-content-button' %>
+</div>
+
+<h2>Workbooks</h2>
+
+<table class="manage-store-locations" cellspacing="0" cellpadding="0">
+  <tr class="header">
+    <th class="sorted-desc"><div class="sort-icon"></div><a href="#SORT">Workbook</a></th>
+    <th class=""><div class="sort-icon"></div><a href="#SORT">Total Cost</a></th>
+    <th class=""><div class="sort-icon"></div><a href="#SORT">Finalized</a></th>
+    <th class=""><div class="sort-icon"></div><a href="#SORT">Number of Exceptions</a></th>
+    <th class=""><div class="sort-icon"></div><a href="#SORT">Close</a></th>
+    <th class=""><div class="sort-icon"></div><a href="#SORT">Created</a></th>
+    <th class=""><div class="sort-icon"></div><a href="#SORT">Updated</a></th>
+    <th>Remove</th>
+  </tr>
+
+
+  <% ['Store Opening', 'Remodel November 2009', 'Remodel January 2009'].each do |area| %>
+  <tr>
+    <td><a href="/store_workbooks/1/edit"><%= area %></a></td>
+    <td><a href="/store_workbooks/1/edit">$14,000</a></td>
+    <td><a href="/store_workbooks/1/edit"><%= image_tag 'success-checkmark.png' %></a></td>
+    <td><a href="/store_workbooks/1/edit">14</a></td>
+    <td><a href="/store_workbooks/1/edit"><%= image_tag 'success-checkmark.png' %></a></td>
+    <td><a href="/store_workbooks/1/edit">3/15/09</a></td>
+    <td><a href="/store_workbooks/1/edit">4/15/09</a></td>
+    <td class="remove"><a href="javascript:jQuery.facebox(removeWorkbook)"><%= image_tag 'gray-remove-circle.png' %></a></td>
+  </tr>
+  <% end %>
+
+
+</table>
+

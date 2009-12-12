@@ -1,0 +1,50 @@
+<script type="text/javascript">
+  var removeLocation = "<div class='facebox-text'>Are you sure you'd like to remove this locale? Any data that was assigned to this locale will be lost.</div>"+
+    "<div class='centered top_pad'><a href='' class='red-button'>Remove Locale</a></div>";
+</script>
+
+<div class="top-right-create-box">
+  <%=link_to "+ Add Locale", '/manage_locales/1/edit', :class => 'main-content-button' %>
+</div>
+
+<h2>Countries</h2>
+
+<table class="manage-store-locations" cellspacing="0" cellpadding="0">
+  <tr class="header">
+    <th class="sorted-desc"><div class="sort-icon"></div><a href="#SORT">Country</a></th>
+    <th class="sorted-desc"><div class="sort-icon"></div><a href="#SORT">Locale</a></th>
+    <th class="sorted-desc"><div class="sort-icon"></div><a href="#SORT">Code</a></th>
+    <th>Remove</th>
+  </tr>
+
+
+  <tr>
+    <td><a href="/manage_locales/1/edit">Canada</a></td>
+    <td><a href="/manage_locales/1/edit">Canadian English</a></td>
+    <td><a href="/manage_locales/1/edit">CA_EN</a></td>
+    <td class="remove"><a href="javascript:jQuery.facebox(removeLocation)"><%= image_tag 'gray-remove-circle.png' %></a></td>
+  </tr>
+
+  <tr>
+    <td><a href="/manage_locales/1/edit">Canada</a></td>
+    <td><a href="/manage_locales/1/edit">Canadian French</a></td>
+    <td><a href="/manage_locales/1/edit">CA_FR</a></td>
+    <td class="remove"><a href="javascript:jQuery.facebox(removeLocation)"><%= image_tag 'gray-remove-circle.png' %></a></td>
+  </tr>
+
+  <tr>
+    <td><a href="/manage_locales/1/edit">Switzerland</a></td>
+    <td><a href="/manage_locales/1/edit">Swiss French</a></td>
+    <td><a href="/manage_locales/1/edit">CH_FR</a></td>
+    <td class="remove"><a href="javascript:jQuery.facebox(removeLocation)"><%= image_tag 'gray-remove-circle.png' %></a></td>
+  </tr>
+
+
+  <tr>
+    <td><a href="/manage_locales/1/edit">Switzerland</a></td>
+    <td><a href="/manage_locales/1/edit">Swiss German</a></td>
+    <td><a href="/manage_locales/1/edit">CH_DE</a></td>
+    <td class="remove"><a href="javascript:jQuery.facebox(removeLocation)"><%= image_tag 'gray-remove-circle.png' %></a></td>
+  </tr>
+</table>
+

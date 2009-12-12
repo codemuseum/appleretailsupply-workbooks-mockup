@@ -1,0 +1,2 @@
+module ManageLocalesHelper
+end

@@ -1,0 +1,77 @@
+<script type="text/javascript">
+  var finalize = "<div class='facebox-text'>Are you sure you'd like to finalize this workbook? This will allow the store to view it in the iPhone application.</div>"+
+    "<div class='centered top_pad'><a href='' class='green-button'>Finalize Workbook</a></div>";
+    var close = "<div class='facebox-text'>Are you sure you'd like to close this workbook? The store will no longer be able to view it in the iPhone application.</div>"+
+      "<div class='centered top_pad'><a href='' class='green-button'>Close Workbook</a></div>";
+</script>
+
+<div class="top-right-create-box">
+  <%=link_to "Finalize Workbook", 'javascript:$.facebox(finalize)', :class => 'main-content-button' %>
+</div>
+
+<h2>Workbook Details</h2>
+
+<table class="all-items" cellspacing="0" cellpadding="0">
+  <tr class="header">
+    <th><a href="#SORT">Detail</a></th>
+    <th><a href="#SORT">Status</a></th>
+  </tr>
+
+  <tr>
+    <td>Workbook</td>
+    <td><a href="/store_workbooks/1/workbook">View workbook &raquo;</a></td>
+  </tr>
+  
+  <tr>
+    <td>Store Size</td>
+    <td><a href="/store_workbooks/1/edit_size_location">Small</a></td>
+  </tr>
+  
+  <tr>
+    <td>Country</td>
+    <td><a href="/store_workbooks/1/edit_size_location">Canada</a></td>
+  </tr>
+  
+  <tr>
+    <td>Locale(s)</td>
+    <td><a href="/store_workbooks/1/edit_size_location">Canadian English, Canadian French</a></td>
+  </tr>
+  
+  <tr>
+    <td>Difference from Current</td>
+    <td><a href="/store_workbooks/1/diff">3 New Items Missing<br/>4 Items No Longer Used</a></td>
+  </tr>
+  
+  <tr>
+    <td>Total Cost</td>
+    <td>$14,000</td>
+  </tr>
+  
+  <tr>
+    <td>Finalized</td>
+    <td><a href="javascript:$.facebox(finalize)" style="color:#999">finalize now...</a></td>
+  </tr>
+  
+  <tr>
+    <td>Exceptions</td>
+    <td><a href="/store_workbooks/1/exceptions">15</a></td>
+  </tr>
+  
+  <tr>
+    <td>Closed</td>
+    <td><a href="javascript:$.facebox(close)" style="color:#999">close now...</a></td>
+  </tr>
+
+  
+  <tr>
+    <td>Created</td>
+    <td>3/12/09</td>
+  </tr>
+  
+  <tr>
+    <td>Updated</td>
+    <td>2/09/09</td>
+  </tr>
+
+</table>
+

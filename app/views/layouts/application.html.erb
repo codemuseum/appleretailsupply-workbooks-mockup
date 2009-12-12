@@ -36,16 +36,19 @@
         <a href="/store_location_items" id="store_location_items-nav" class="nav-el<%= @section == 'store_location_items' ? ' selected' : '' %>"><span class="icon">Store Location</span></a>
         <a href="/vendor_supply_type_items" id="vendor_supply_type_items-nav" class="nav-el<%= @section == 'vendor_supply_types' ? ' selected' : '' %>"><span class="icon">Vendor Type</span></a>
         <a href="/country_items" id="country_items-nav" class="nav-el<%= @section == 'country_items' ? ' selected' : '' %>"><span class="icon">Country</span></a>
+        <a href="/open_notes_items" id="open_notes_items-nav" class="nav-el<%= @section == 'open_notes_items' ? ' selected' : '' %>"><span class="icon">W/ Open Notes</span></a>
       </div>
 
       <div class="nav-section">
-        <h2>Generate Workbooks</h2>
-
-        <a href="/new_store_openings/new" id="new_store_openings-nav" class="nav-el<%= @section == 'new_store_openings' ? ' selected' : '' %>"><span class="icon">New Store Opng.</span></a>
-        <a href="/store_remodels/new" id="store_remodels-nav" class="nav-el<%= @section == 'store_remodels' ? ' selected' : '' %>"><span class="icon">Remodel Workbk.</span></a>
+        <h2>Store Workbooks</h2>
+        
+        <a href="/store_workbooks/1" id="store_workbooks-nav" class="nav-el<%= @section == 'store_workbooks_1' ? ' selected' : '' %>"><span class="icon">R123 - SOMA</span></a>
+        <a href="/store_workbooks/1" id="store_workbooks-nav" class="nav-el<%= @section == 'store_workbooks_2' ? ' selected' : '' %>"><span class="icon">R329 - 5th Ave</span></a>
+        
+        <!-- <a href="/new_store_openings/new" id="new_store_openings-nav" class="nav-el<%= @section == 'new_store_openings' ? ' selected' : '' %>"><span class="icon">New Store Opng.</span></a> -->
+        <!-- <a href="/store_remodels/new" id="store_remodels-nav" class="nav-el<%= @section == 'store_remodels' ? ' selected' : '' %>"><span class="icon">Remodel Workbk.</span></a> -->
       </div>
-
-
+      
       <div class="nav-section">
         <h2>Settings</h2>
 

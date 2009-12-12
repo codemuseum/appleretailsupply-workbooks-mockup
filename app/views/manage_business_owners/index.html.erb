@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  var removeLocation = "<div class='facebox-text'>Are you sure you'd like to remove this business owner? Any data that was assigned to this business owner will no longer be assigned to one.</div>"+
+    "<div class='centered top_pad'><a href='' class='red-button'>Remove Business Owner</a></div>";
+</script>
+
+<div class="top-right-create-box">
+  <%=link_to "+ Add Business Owner", '/manage_business_owners/1/edit', :class => 'main-content-button' %>
+</div>
+
+<h2>Countries</h2>
+
+<table class="manage-store-locations" cellspacing="0" cellpadding="0">
+  <tr class="header">
+    <th class="sorted-desc"><div class="sort-icon"></div><a href="#SORT">Business Owner</a></th>
+    <th>Remove</th>
+  </tr>
+
+
+  <% ['Retail Technology', 'Marketing'].each do |area| %>
+  <tr>
+    <td><a href="/manage_business_owners/1/edit"><%= area %></a></td>
+    <td class="remove"><a href="javascript:jQuery.facebox(removeLocation)"><%= image_tag 'gray-remove-circle.png' %></a></td>
+  </tr>
+  <% end %>
+
+
+</table>
+
